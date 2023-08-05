@@ -14,10 +14,9 @@ Similar packages:
 ## Synopsis
 
 ```go
-import prantlf.path { dirname }
+import prantlf.upath { dirname }
 
-home_dir := ...   // '/home/prantlf' or r'C:\Users\prantlf'
-dirname(home_dir) // returns '/home' or r'C:\Users'
+dirname('/home/prantlf') // returns '/home'
 ```
 
 ## Installation
@@ -25,8 +24,8 @@ dirname(home_dir) // returns '/home' or r'C:\Users'
 You can install this package either from [VPM] or from GitHub:
 
 ```txt
-v install prantlf.path
-v install --git https://github.com/prantlf/v-path
+v install prantlf.upath
+v install --git https://github.com/prantlf/v-upath
 ```
 
 ## API
@@ -38,8 +37,7 @@ The following functions are exported:
 Theis method returns the last portion of a path, similar to the [POSIX basename] command. Trailing directory separators are ignored.
 
 ```go
-home_dir := ...         // '/home/prantlf' or r'C:\Users\prantlf'
-path.basename(home_dir) // returns 'prantlf'
+upath.basename('/home/prantlf') // returns 'prantlf'
 ```
 
 ### dirname(path string) string
@@ -47,8 +45,7 @@ path.basename(home_dir) // returns 'prantlf'
 This method returns the directory name of a path, similar to the [POSIX dirname] command. Trailing directory separators are ignored.
 
 ```go
-home_dir := ...        // '/home/prantlf' or r'C:\Users\prantlf'
-path.dirname(home_dir) // returns '/home' or r'C:\Users'
+upath.dirname('/home/prantlf') // returns '/home'
 ```
 
 ### extname(path string) string
@@ -56,10 +53,7 @@ path.dirname(home_dir) // returns '/home' or r'C:\Users'
 This method returns the extension of the path, from the last occurrence of the `.` (period) character to end of string in the last portion of the path. If there is no `.` in the last portion of the path, or if there are no `.` characters other than the first character of the basename of path (see `basename` above), an empty string is returned.
 
 ```go
-// sets '/home/prantlf/info.txt' or r'C:\Users\prantlf\info.txt'
-info_file := os.join_path_single(os.getwd(), 'info.txt')
-// returns '.txt'
-path.extname(info_file)
+upath.extname('/home/prantlf/start.sh') // returns '.sh'
 ```
 
 ## Contributing
@@ -72,7 +66,7 @@ Copyright (c) 2023 Ferdinand Prantl
 
 Licensed under the MIT license.
 
-[VPM]: https://vpm.vlang.io/packages/prantlf.path
+[VPM]: https://vpm.vlang.io/packages/prantlf.upath
 [path]: https://github.com/prantlf/v-path
 [wpath]: https://github.com/prantlf/v-wpath
 [bpath]: https://github.com/prantlf/v-bpath
