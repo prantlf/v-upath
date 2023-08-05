@@ -73,7 +73,7 @@ Copyright (c) 2023 Ferdinand Prantl
 Licensed under the MIT license.
 
 [VPM]: https://vpm.vlang.io/packages/prantlf.path
-[upath]: https://github.com/prantlf/v-upath
+[path]: https://github.com/prantlf/v-path
 [wpath]: https://github.com/prantlf/v-wpath
 [bpath]: https://github.com/prantlf/v-bpath
 [POSIX basename]: https://man7.org/linux/man-pages/man3/basename.3p.html
