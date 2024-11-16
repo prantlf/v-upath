@@ -13,31 +13,31 @@ fn test_name() {
 }
 
 fn test_slash() {
-	out := basename('${upath.slash}')
-	assert out == '${upath.slash}'
+	out := basename('${slash}')
+	assert out == '${slash}'
 }
 
 fn test_two_slashes() {
-	out := basename('${upath.slash}${upath.slash}')
-	assert out == '${upath.slash}'
+	out := basename('${slash}${slash}')
+	assert out == '${slash}'
 }
 
 fn test_name_ends_with_slash() {
-	out := basename('a${upath.slash}')
+	out := basename('a${slash}')
 	assert out == 'a'
 }
 
 fn test_name_ends_with_two_slashes() {
-	out := basename('a${upath.slash}${upath.slash}')
+	out := basename('a${slash}${slash}')
 	assert out == 'a'
 }
 
 fn test_name_starts_with_slash() {
-	out := basename('${upath.slash}a')
+	out := basename('${slash}a')
 	assert out == 'a'
 }
 
 fn test_names_with_slash() {
-	out := basename('a${upath.slash}b')
+	out := basename('a${slash}b')
 	assert out == 'b'
 }

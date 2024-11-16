@@ -31,7 +31,7 @@ pub fn dirname(p string) string {
 	if p.len == 0 {
 		return '.'
 	}
-	if p.len == 1 && p[0] == upath.sep {
+	if p.len == 1 && p[0] == sep {
 		return p
 	}
 
@@ -57,7 +57,7 @@ pub fn extname(p string) string {
 	return if dot_index > 0 {
 		if dot_index > 0 {
 			prev := p[dot_index - 1]
-			if prev == upath.sep {
+			if prev == sep {
 				''
 			} else {
 				p[dot_index..end]
@@ -75,7 +75,7 @@ fn last_name_end(p string) int {
 	mut end := p.len
 	for end > 1 {
 		c := p[end - 1]
-		if c != upath.sep {
+		if c != sep {
 			break
 		}
 		end--
@@ -86,7 +86,7 @@ fn last_name_end(p string) int {
 @[direct_array_access]
 fn last_sep(s string, end int) int {
 	for i := end - 1; i >= 0; i-- {
-		if s[i] == upath.sep {
+		if s[i] == sep {
 			return i
 		}
 	}
