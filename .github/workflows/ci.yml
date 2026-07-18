@@ -25,20 +25,13 @@ jobs:
     steps:
     - uses: actions/checkout@v7
     - uses: prantlf/setup-v-action@v3
-    - run: |
-        ls -al /Users/runner/.vmodules/prantlf
-        ls -al /Users/runner/.vmodules/prantlf/strutil
-        make
+    - run: make
 
   windows:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v7
     - uses: prantlf/setup-v-action@v3
-    - run: |
-        md modules
-        md modules\prantlf
-        git clone --depth=1 --recursive --shallow-submodules https://github.com/prantlf/v-strutil modules\prantlf\strutil
     - run: cmd /c make.bat
 
   release:
