@@ -1,5 +1,11 @@
 # Changes
 
+## [0.2.0](https://github.com/prantlf/v-upath/compare/v0.1.0...v0.2.0) (2026-07-18)
+
+### Features
+
+* Adapt to breaking changes in V II ([a12b8f0](https://github.com/prantlf/v-upath/commit/a12b8f0c56ed223e13469a9495f2878e38df9bf2))
+
 ## [0.1.0](https://github.com/prantlf/v-upath/compare/v0.0.3...v0.1.0) (2026-07-18)
 
 ### Features
